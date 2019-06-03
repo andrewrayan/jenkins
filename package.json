@@ -1,0 +1,22 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "Jenkins test application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewrayan/jenkins.git"
+  },
+  "author": "Andrew Rayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewrayan/jenkins/issues"
+  },
+  "homepage": "https://github.com/andrewrayan/jenkins#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
