@@ -1,9 +1,9 @@
 pipeline {
-         agent { dockerfile true }
+         agent any
          stages {
                  stage('One') {
                  steps {
-                     echo 'Docker application has been built successfully.'
+                     sh "docker build -t docker-test ."
                  }
                  }
                  stage('Two') {
