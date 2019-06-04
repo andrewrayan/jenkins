@@ -14,7 +14,7 @@ RUN apt-get install --yes build-essential
 RUN npm install pm2 -g
 
 # Bundle app source
-COPY ./Desktop/git/myfolder ./src
+COPY . ./src
 
 # Install app dependencies
 RUN cd /src; npm install
