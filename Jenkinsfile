@@ -1,26 +1,16 @@
 pipeline {
-         agent any
+         agent { dockerfile true }
          stages {
                  stage('One') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     echo 'Docker application has been built successfully.'
                  }
                  }
                  stage('Two') {
                  steps {
-                    input('Do you want to proceed?')
+                    echo 'Completed deploying the application.'
                  }
                  }
-                 stage('Three') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
-                 steps {
-                       echo "Hello"
-                 }
-                 }
-                 
+               
               }
 }
