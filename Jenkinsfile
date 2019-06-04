@@ -3,12 +3,15 @@ pipeline {
          stages {
                  stage('One') {
                  steps {
-                     sh "docker build -t docker-test ."
+                     app = docker.build("docker-test").withRun('-p 8181:3000')
+                    
                  }
                  }
                  stage('Two') {
                  steps {
-                    sh "docker run --name docker_test -p 8181:3000 -d docker-test"
+                          app.inside{
+                                  sh 'echo "Test passed"' 
+                          }
                  }
                  }
                  stage('Three') {
@@ -19,3 +22,4 @@ pipeline {
 
               }
 }
+
