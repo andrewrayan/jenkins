@@ -9,7 +9,7 @@ pipeline {
     stage('Build and Package') {
       steps {
         withDockerContainer("docker-test") {
-            sh "cd src && npm install"
+            sh "npm install"
         }
       }
     }
