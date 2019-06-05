@@ -8,14 +8,12 @@ pipeline {
     }
     stage('Build and Package') {
       steps {
-        withDockerContainer("docker-test") {
-            sh "npm install"
-        }
+        sh "docker exec -it demo-test pm2 reload all"
       }
     }
     stage('tar and upload') {
        steps {
-          sh 'tar -cvf src.tar src'
+          echo 'Completed successfully.'
             }
         }
     }
