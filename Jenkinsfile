@@ -13,7 +13,7 @@ pipeline {
     }
     stage('tar and upload') {
        steps {
-          echo 'Completed successfully.'
+          sh "docker cp demo.txt docker-test:/demo.txt"
             }
         }
     }
