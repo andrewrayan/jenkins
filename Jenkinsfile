@@ -13,7 +13,7 @@ pipeline {
     }
     stage('tar and upload') {
        steps {
-          sh "docker cp demo.txt docker-test:/demo.txt"
+          sh "docker exec docker-test sh -c 'cd /src && npm install'"
             }
         }
     }
