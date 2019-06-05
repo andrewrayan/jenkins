@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build and Package') {
       steps {
-        sh "docker exec -it docker-test pm2 reload all"
+        sh "docker exec docker-test pm2 reload all"
       }
     }
     stage('tar and upload') {
